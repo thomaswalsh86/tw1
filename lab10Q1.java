@@ -1,9 +1,11 @@
 import java.util.Scanner;
+import java.lang.Math;
 public class lab10Q1 {
     public static void main(String[]args)
-    Scanner scan = Scanner(System.in);
-    int square,circle,rectangle;
     {
+    Scanner scan = new Scanner(System.in);
+    double square,circle,rectangle,sp,cc,rp;
+  
         while(true)
         {
             System.out.println("Pick a shape");
@@ -11,18 +13,41 @@ public class lab10Q1 {
 
             if(in == "square")
             {
-                square = l*w
-            }
-
-            if(in == "rectangle")
+                  System.out.println("Pick a length");
+                  int l=scan.nextInt();
+                  System.out.println("Pick a width");
+                  int w=scan.nextInt();
+                  square = l*w;
+                  System.out.println("The area of the square is : "+square);            
+                  sp=l+w;
+                  System.out.println("The perimeter of the rectangle is : "+sp);
+            }    
+           else if(in == "rectangle")
             {
-                rectangle = l*w*h;
+                 System.out.println("Pick a length");
+                  int l=scan.nextInt();
+                  System.out.println("Pick a width");
+                  int w=scan.nextInt();
+                  System.out.println("Pick a height");
+                  int h=scan.nextInt();
+                  rectangle = l*w*h;
+                  System.out.println("The area of the rectangle is : "+rectangle);
+                  rp=l+w+h;
+                  System.out.println("The perimeter of the rectangle is : "+rp);
             }
-            if(in == "circle")
+            else if(in == "circle")
             {
-                circle = r*PI;
+                 System.out.println("Pick a radius");
+                 int r=scan.nextInt();
+                 circle = Math.PI*Math.pow(r,2);
+                 System.out.println("The area of the circle is : "+circle);
+                 cc=2*Math.PI*r;
+                 System.out.println("The perimeter of the circle is : "+circle);
             }
-
+           else  if(in=="q")
+            {
+                break;
+            }
         }
     }
 }
