@@ -5,13 +5,14 @@ public class lab10Q1 {
     {
     Scanner scan = new Scanner(System.in);
     double square,circle,rectangle,sp,cc,rp;
+    
   
         while(true)
         {
             System.out.println("Pick a shape");
             String in=scan.nextLine();
 
-            if(in == "square")
+            if(in.equals("square"))
             {
                   System.out.println("Pick a length");
                   double l=scan.nextInt();
@@ -22,7 +23,7 @@ public class lab10Q1 {
                   sp=l+w;
                   System.out.println("The perimeter of the rectangle is : "+sp);
             }    
-           else if(in == "rectangle")
+           else if(in.equals("rectangle"))
             {
                  System.out.println("Pick a length");
                   double l=scan.nextInt();
@@ -35,7 +36,7 @@ public class lab10Q1 {
                   rp=l+w+h;
                   System.out.println("The perimeter of the rectangle is : "+rp);
             }
-            else if(in == "circle")
+            else if(in.equals( "circle"))
             {
                  System.out.println("Pick a radius");
                  double r=scan.nextInt();
@@ -44,11 +45,11 @@ public class lab10Q1 {
                  cc=2*Math.PI*r;
                  System.out.println("The perimeter of the circle is : "+circle);
             }
-           else if(in=="q")
+           else if(in.equals(q))
             {
                 break;
             }
-            scan.close();
+            //scan.close();
         }
     }
 }
